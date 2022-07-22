@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <WasiRunner>$(WebServerWasiHostExecutable)</WasiRunner>
+    <WasiRunnerArgs>--tcplisten localhost:8080 --env ASPNETCORE_URLS=http://localhost:8080</WasiRunnerArgs>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Wasi.AspNetCore.BundledFiles" Version="0.1.1" />
+    <PackageReference Include="Wasi.AspNetCore.Server.CustomHost" Version="0.1.1" />
+    <PackageReference Include="Wasi.AspNetCore.Server.Native" Version="0.1.1" />
+    <PackageReference Include="Wasi.Sdk" Version="0.1.1" />
+  </ItemGroup>
+
+</Project>
